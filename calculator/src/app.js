@@ -21,12 +21,19 @@ const plusMinus = document.querySelector(".plusMinus");
 const zero = document.querySelector(".zero");
 const dot = document.querySelector(".dot");
 const displayPanel = document.querySelector(".display");
+const operateNums = document.querySelector(".operate");
+const historyNums = document.querySelector(".history");
 
 let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function display() {
-	allBtns.forEach(btn => {});
+	allBtns.forEach(btn => {
+		btn.addEventListener("click", e => {
+			operateNums.innerHTML = e.target.textContent;
+		});
+	});
 }
+display();
 function addNums() {}
 addNums();
 function substractNums() {}
